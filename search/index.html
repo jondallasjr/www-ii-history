@@ -1,0 +1,907 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Search Results - WWII History</title><style>/* Global CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+a {
+  color: #2d5a7b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d4a574;
+}
+
+/* Header Styles */
+.site-header {
+  background-color: #1a3a52;
+  color: #ffffff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d4a574;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: #e8b88f;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* Navigation Styles */
+.site-nav {
+  background-color: #1a3a52;
+  padding: 0;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list a {
+  display: block;
+  padding: 15px 18px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-list a:hover {
+  background-color: rgba(212, 165, 116, 0.1);
+  color: #d4a574;
+  border-bottom-color: #d4a574;
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #1a3a52;
+  color: #ffffff;
+  padding: 50px 20px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3 {
+  color: #d4a574;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #d4a574;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(212, 165, 116, 0.2);
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+  
+  .site-nav {
+    display: none;
+    width: 100%;
+    background-color: #0f2639;
+  }
+  
+  .site-nav.active {
+    display: block;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  
+  .nav-list a {
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(212, 165, 116, 0.1);
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* Search Results - WWII History - Page CSS */
+.search-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-header h1 {
+  font-size: 2.5rem;
+  color: #1a3a52;
+  margin-bottom: 30px;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.search-input-group {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  gap: 10px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #d4a574;
+  border-radius: 4px;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2d5a7b;
+  box-shadow: 0 0 0 3px rgba(45, 90, 123, 0.1);
+}
+
+.search-button {
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #1a3a52;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #2d5a7b;
+}
+
+.search-filters {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.filter-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #d4a574;
+}
+
+.search-results {
+  min-height: 200px;
+}
+
+.results-placeholder {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  color: #666;
+  font-size: 1.05rem;
+}
+
+.result-item {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #d4a574;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.result-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateX(4px);
+}
+
+.result-category {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #d4a574;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.result-item h3 {
+  font-size: 1.3rem;
+  color: #1a3a52;
+  margin: 10px 0;
+}
+
+.result-item h3 a {
+  color: #2d5a7b;
+  transition: color 0.3s ease;
+}
+
+.result-item h3 a:hover {
+  color: #d4a574;
+}
+
+.result-item p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.quick-links {
+  background-color: #f5f5f5;
+  padding: 40px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.quick-links h2 {
+  font-size: 1.5rem;
+  color: #1a3a52;
+  margin-bottom: 30px;
+}
+
+.links-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-list li {
+  margin: 0;
+}
+
+.links-list a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 2px solid #d4a574;
+  color: #2d5a7b;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.links-list a:hover {
+  background-color: #d4a574;
+  color: #ffffff;
+  border-color: #d4a574;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    margin: 25px auto;
+  }
+
+  .search-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .search-input-group {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .search-filters {
+    gap: 12px;
+  }
+
+  .filter-checkbox {
+    font-size: 0.9rem;
+  }
+
+  .quick-links {
+    padding: 25px 20px;
+  }
+
+  .quick-links h2 {
+    font-size: 1.2rem;
+  }
+
+  .links-list {
+    gap: 10px;
+  }
+
+  .links-list a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-input {
+    font-size: 16px;
+  }
+
+  .result-item {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .result-item h3 {
+    font-size: 1.1rem;
+  }
+}.search-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-header h1 {
+  font-size: 2.5rem;
+  color: #1a3a52;
+  margin-bottom: 30px;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.search-input-group {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  gap: 10px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #d4a574;
+  border-radius: 4px;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2d5a7b;
+  box-shadow: 0 0 0 3px rgba(45, 90, 123, 0.1);
+}
+
+.search-button {
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #1a3a52;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #2d5a7b;
+}
+
+.search-filters {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.filter-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #d4a574;
+}
+
+.search-results {
+  min-height: 200px;
+}
+
+.results-placeholder {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  color: #666;
+  font-size: 1.05rem;
+}
+
+.result-item {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #d4a574;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.result-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateX(4px);
+}
+
+.result-category {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #d4a574;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.result-item h3 {
+  font-size: 1.3rem;
+  color: #1a3a52;
+  margin: 10px 0;
+}
+
+.result-item h3 a {
+  color: #2d5a7b;
+  transition: color 0.3s ease;
+}
+
+.result-item h3 a:hover {
+  color: #d4a574;
+}
+
+.result-item p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.quick-links {
+  background-color: #f5f5f5;
+  padding: 40px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.quick-links h2 {
+  font-size: 1.5rem;
+  color: #1a3a52;
+  margin-bottom: 30px;
+}
+
+.links-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-list li {
+  margin: 0;
+}
+
+.links-list a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 2px solid #d4a574;
+  color: #2d5a7b;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.links-list a:hover {
+  background-color: #d4a574;
+  color: #ffffff;
+  border-color: #d4a574;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    margin: 25px auto;
+  }
+
+  .search-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .search-input-group {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .search-filters {
+    gap: 12px;
+  }
+
+  .filter-checkbox {
+    font-size: 0.9rem;
+  }
+
+  .quick-links {
+    padding: 25px 20px;
+  }
+
+  .quick-links h2 {
+    font-size: 1.2rem;
+  }
+
+  .links-list {
+    gap: 10px;
+  }
+
+  .links-list a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-input {
+    font-size: 16px;
+  }
+
+  .result-item {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .result-item h3 {
+    font-size: 1.1rem;
+  }
+}</style></head><body><header class="site-header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="/www-ii-history/home">WWII History</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', function() {
+    document.querySelector('.site-nav').classList.toggle('active');
+  });
+</script><nav class="site-nav">
+  <ul class="nav-list">
+    <li><a href="/www-ii-history/home">Home</a></li>
+    <li><a href="/www-ii-history/timeline">Timeline</a></li>
+    <li><a href="/www-ii-history/causes">Causes</a></li>
+    <li><a href="/www-ii-history/key-figures">Key Figures</a></li>
+    <li><a href="/www-ii-history/battles">Battles</a></li>
+    <li><a href="/www-ii-history/pacific-war">Pacific War</a></li>
+    <li><a href="/www-ii-history/holocaust">Holocaust</a></li>
+    <li><a href="/www-ii-history/primary-sources">Primary Sources</a></li>
+    <li><a href="/www-ii-history/education">Education</a></li>
+    <li><a href="/www-ii-history/about">About</a></li>
+    <li><a href="/www-ii-history/search">Search</a></li>
+    <li><a href="/www-ii-history/contact">Contact</a></li>
+  </ul>
+</nav><main class="search-container">
+  <div class="search-wrapper">
+    <section class="search-header">
+      <h1>Search WWII History</h1>
+      <form class="search-form" id="searchForm">
+        <div class="search-input-group">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search battles, figures, events, resources..." aria-label="Search query">
+          <button type="submit" class="search-button">Search</button>
+        </div>
+        <div class="search-filters">
+          <label class="filter-checkbox">
+            <input type="checkbox" name="category" value="battles" checked>
+            <span>Battles</span>
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="category" value="figures" checked>
+            <span>Key Figures</span>
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="category" value="events" checked>
+            <span>Events</span>
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" name="category" value="resources" checked>
+            <span>Resources</span>
+          </label>
+        </div>
+      </form>
+    </section>
+
+    <section class="search-results" id="searchResults">
+      <div class="results-placeholder">
+        <p>Enter a search term to find content across battles, figures, events, and educational resources.</p>
+      </div>
+    </section>
+
+    <section class="quick-links">
+      <h2>Popular Searches</h2>
+      <ul class="links-list">
+        <li><a href="#" data-search="D-Day">D-Day</a></li>
+        <li><a href="#" data-search="Pearl Harbor">Pearl Harbor</a></li>
+        <li><a href="#" data-search="Winston Churchill">Winston Churchill</a></li>
+        <li><a href="#" data-search="Holocaust">Holocaust</a></li>
+        <li><a href="#" data-search="Pacific War">Pacific War</a></li>
+        <li><a href="#" data-search="Adolf Hitler">Adolf Hitler</a></li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<script>
+  const searchForm = document.getElementById('searchForm');
+  const searchInput = document.getElementById('searchInput');
+  const searchResults = document.getElementById('searchResults');
+  const categoryCheckboxes = document.querySelectorAll('input[name="category"]');
+  const popularSearchLinks = document.querySelectorAll('.links-list a');
+
+  // Sample data for demonstration
+  const contentDatabase = {
+    battles: [
+      { title: 'D-Day', slug: '/battles/normandy', summary: 'The Normandy invasion on June 6, 1944, marked the beginning of Operation Overlord.' },
+      { title: 'Battle of Stalingrad', slug: '#', summary: 'One of the deadliest battles in human history fought from 1942-1943.' },
+      { title: 'Battle of Midway', slug: '#', summary: 'A decisive naval battle in the Pacific War in June 1942.' },
+      { title: 'Battle of Berlin', slug: '#', summary: 'The final major battle in Europe fought in 1945.' }
+    ],
+    figures: [
+      { title: 'Winston Churchill', slug: '/key-figures/churchill', summary: 'British Prime Minister who led the UK during World War II.' },
+      { title: 'Adolf Hitler', slug: '#', summary: 'Leader of Nazi Germany during the war.' },
+      { title: 'Franklin D. Roosevelt', slug: '#', summary: 'U.S. President who guided America through the war.' },
+      { title: 'Joseph Stalin', slug: '#', summary: 'Soviet Union leader during the war.' }
+    ],
+    events: [
+      { title: 'Pearl Harbor Attack', slug: '#', summary: 'Japanese attack on U.S. naval base on December 7, 1941.' },
+      { title: 'Holocaust', slug: '/holocaust', summary: 'The systematic genocide of six million Jews by Nazi Germany.' },
+      { title: 'Operation Barbarossa', slug: '#', summary: 'Nazi Germany\'s invasion of the Soviet Union in 1941.' },
+      { title: 'Atomic Bombings', slug: '#', summary: 'Nuclear attacks on Hiroshima and Nagasaki in August 1945.' }
+    ],
+    resources: [
+      { title: 'WWII Timeline', slug: '/timeline', summary: 'A comprehensive chronological guide to major WWII events.' },
+      { title: 'Primary Sources', slug: '/primary-sources', summary: 'Original documents, letters, and photographs from the war.' },
+      { title: 'Education Resources', slug: '/education', summary: 'Lesson plans and educational materials for students.' },
+      { title: 'Causes of WWII', slug: '/causes', summary: 'Understand the political and economic factors that led to the war.' }
+    ]
+  };
+
+  function performSearch() {
+    const query = searchInput.value.toLowerCase().trim();
+    const selectedCategories = Array.from(categoryCheckboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
+
+    if (!query) {
+      searchResults.innerHTML = '<div class="results-placeholder"><p>Enter a search term to find content.</p></div>';
+      return;
+    }
+
+    let results = [];
+    selectedCategories.forEach(category => {
+      const categoryResults = contentDatabase[category].filter(item =>
+        item.title.toLowerCase().includes(query) ||
+        item.summary.toLowerCase().includes(query)
+      );
+      results = results.concat(categoryResults.map(r => ({ ...r, category })));
+    });
+
+    if (results.length === 0) {
+      searchResults.innerHTML = '<div class="results-placeholder"><p>No results found for "' + query + '". Try different keywords or adjust your filters.</p></div>';
+      return;
+    }
+
+    searchResults.innerHTML = results.map(result =>
+      '<article class="result-item">'
+      + '<span class="result-category">' + result.category + '</span>'
+      + '<h3><a href="' + result.slug + '">' + result.title + '</a></h3>'
+      + '<p>' + result.summary + '</p>'
+      + '</article>'
+    ).join('');
+  }
+
+  searchForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    performSearch();
+  });
+
+  categoryCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', performSearch);
+  });
+
+  popularSearchLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      searchInput.value = this.getAttribute('data-search');
+      performSearch();
+    });
+  });
+</script><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>About This Site</h3>
+      <p>A comprehensive resource for understanding World War II's causes, events, key figures, and lasting impact on world history.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/www-ii-history/timeline">Timeline</a></li>
+        <li><a href="/www-ii-history/education">Education Resources</a></li>
+        <li><a href="/www-ii-history/primary-sources">Primary Sources</a></li>
+        <li><a href="/www-ii-history/search">Search</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="/www-ii-history/contact">Contact Us</a></li>
+        <li><a href="/www-ii-history/about">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 WWII History. All rights reserved.</p>
+  </div>
+</footer></body></html>
