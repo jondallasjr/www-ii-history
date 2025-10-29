@@ -1,0 +1,909 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>About This Site - Our Mission & Approach</title><style>/* Global CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+a {
+  color: #2d5a7b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d4a574;
+}
+
+/* Header Styles */
+.site-header {
+  background-color: #1a3a52;
+  color: #ffffff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d4a574;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: #e8b88f;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* Navigation Styles */
+.site-nav {
+  background-color: #1a3a52;
+  padding: 0;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list a {
+  display: block;
+  padding: 15px 18px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-list a:hover {
+  background-color: rgba(212, 165, 116, 0.1);
+  color: #d4a574;
+  border-bottom-color: #d4a574;
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #1a3a52;
+  color: #ffffff;
+  padding: 50px 20px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3 {
+  color: #d4a574;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #d4a574;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(212, 165, 116, 0.2);
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+  
+  .site-nav {
+    display: none;
+    width: 100%;
+    background-color: #0f2639;
+  }
+  
+  .site-nav.active {
+    display: block;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  
+  .nav-list a {
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(212, 165, 116, 0.1);
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* About This Site - Our Mission & Approach - Page CSS */
+.about-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  color: #d4a574;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.mission-section,
+.editorial-section,
+.contributors-section,
+.approach-section,
+.commitment-section,
+.contact-cta {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mission-section h2,
+.editorial-section h2,
+.contributors-section h2,
+.approach-section h2,
+.commitment-section h2,
+.contact-cta h2 {
+  font-size: 2rem;
+  color: #1a3a52;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #d4a574;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.mission-section p,
+.editorial-section p,
+.contributors-section p,
+.approach-section p,
+.commitment-section p,
+.contact-cta p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.mission-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 25px 0;
+}
+
+.mission-list li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.mission-list li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #d4a574;
+  font-weight: bold;
+}
+
+.standards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.standard-card {
+  background-color: #f5f5f5;
+  border-left: 4px solid #d4a574;
+  padding: 25px;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.standard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.standard-card h3 {
+  color: #1a3a52;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.standard-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+.contributor-types {
+  list-style: none;
+  padding-left: 0;
+  margin: 25px 0;
+}
+
+.contributor-types li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.contributor-types li:before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: #2d5a7b;
+  font-size: 0.8rem;
+}
+
+.approach-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.approach-card {
+  background: linear-gradient(135deg, #f9f9f9 0%, #f3f3f3 100%);
+  padding: 25px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.approach-card:hover {
+  border-color: #d4a574;
+  box-shadow: 0 6px 12px rgba(45, 90, 123, 0.1);
+}
+
+.approach-card h3 {
+  color: #1a3a52;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.approach-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+.commitment-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 25px 0;
+}
+
+.commitment-list li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.commitment-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #d4a574;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.contact-cta {
+  background-color: #f0f0f0;
+  padding: 40px;
+  border-radius: 6px;
+  border-left: 5px solid #d4a574;
+  text-align: center;
+}
+
+.contact-cta h2 {
+  border: none;
+  padding: 0 0 15px 0;
+}
+
+.contact-cta a {
+  color: #d4a574;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-cta a:hover {
+  color: #1a3a52;
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 60px 20px;
+    margin-bottom: 40px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+  }
+  
+  .mission-section h2,
+  .editorial-section h2,
+  .contributors-section h2,
+  .approach-section h2,
+  .commitment-section h2,
+  .contact-cta h2 {
+    font-size: 1.5rem;
+  }
+  
+  .standards-grid,
+  .approach-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .content-wrapper {
+    gap: 40px;
+  }
+  
+  .contact-cta {
+    padding: 30px 20px;
+  }
+}.about-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  color: #d4a574;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.mission-section,
+.editorial-section,
+.contributors-section,
+.approach-section,
+.commitment-section,
+.contact-cta {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mission-section h2,
+.editorial-section h2,
+.contributors-section h2,
+.approach-section h2,
+.commitment-section h2,
+.contact-cta h2 {
+  font-size: 2rem;
+  color: #1a3a52;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #d4a574;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.mission-section p,
+.editorial-section p,
+.contributors-section p,
+.approach-section p,
+.commitment-section p,
+.contact-cta p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.mission-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 25px 0;
+}
+
+.mission-list li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.mission-list li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #d4a574;
+  font-weight: bold;
+}
+
+.standards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.standard-card {
+  background-color: #f5f5f5;
+  border-left: 4px solid #d4a574;
+  padding: 25px;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.standard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.standard-card h3 {
+  color: #1a3a52;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.standard-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+.contributor-types {
+  list-style: none;
+  padding-left: 0;
+  margin: 25px 0;
+}
+
+.contributor-types li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.contributor-types li:before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: #2d5a7b;
+  font-size: 0.8rem;
+}
+
+.approach-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.approach-card {
+  background: linear-gradient(135deg, #f9f9f9 0%, #f3f3f3 100%);
+  padding: 25px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.approach-card:hover {
+  border-color: #d4a574;
+  box-shadow: 0 6px 12px rgba(45, 90, 123, 0.1);
+}
+
+.approach-card h3 {
+  color: #1a3a52;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.approach-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+.commitment-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 25px 0;
+}
+
+.commitment-list li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.commitment-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #d4a574;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.contact-cta {
+  background-color: #f0f0f0;
+  padding: 40px;
+  border-radius: 6px;
+  border-left: 5px solid #d4a574;
+  text-align: center;
+}
+
+.contact-cta h2 {
+  border: none;
+  padding: 0 0 15px 0;
+}
+
+.contact-cta a {
+  color: #d4a574;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-cta a:hover {
+  color: #1a3a52;
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 60px 20px;
+    margin-bottom: 40px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+  }
+  
+  .mission-section h2,
+  .editorial-section h2,
+  .contributors-section h2,
+  .approach-section h2,
+  .commitment-section h2,
+  .contact-cta h2 {
+    font-size: 1.5rem;
+  }
+  
+  .standards-grid,
+  .approach-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .content-wrapper {
+    gap: 40px;
+  }
+  
+  .contact-cta {
+    padding: 30px 20px;
+  }
+}</style></head><body><header class="site-header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="/www-ii-history/home">WWII History</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', function() {
+    document.querySelector('.site-nav').classList.toggle('active');
+  });
+</script><nav class="site-nav">
+  <ul class="nav-list">
+    <li><a href="/www-ii-history/home">Home</a></li>
+    <li><a href="/www-ii-history/timeline">Timeline</a></li>
+    <li><a href="/www-ii-history/causes">Causes</a></li>
+    <li><a href="/www-ii-history/key-figures">Key Figures</a></li>
+    <li><a href="/www-ii-history/battles">Battles</a></li>
+    <li><a href="/www-ii-history/pacific-war">Pacific War</a></li>
+    <li><a href="/www-ii-history/holocaust">Holocaust</a></li>
+    <li><a href="/www-ii-history/primary-sources">Primary Sources</a></li>
+    <li><a href="/www-ii-history/education">Education</a></li>
+    <li><a href="/www-ii-history/about">About</a></li>
+    <li><a href="/www-ii-history/search">Search</a></li>
+    <li><a href="/www-ii-history/contact">Contact</a></li>
+  </ul>
+</nav><main class="about-container">
+  <section class="about-hero">
+    <div class="hero-content">
+      <h1>About This Site</h1>
+      <p class="tagline">Our Mission & Approach to WWII History</p>
+    </div>
+  </section>
+
+  <section class="about-content">
+    <div class="content-wrapper">
+      <section class="mission-section">
+        <h2>Our Mission</h2>
+        <p>The WWII History site is dedicated to providing comprehensive, accurate, and accessible information about World War II. We aim to educate students, researchers, educators, and history enthusiasts about the causes, events, key figures, and lasting impact of this pivotal moment in human history.</p>
+        <p>Our mission is to:</p>
+        <ul class="mission-list">
+          <li>Present historical facts with scholarly rigor and clarity</li>
+          <li>Make complex historical events understandable for diverse audiences</li>
+          <li>Preserve and share primary sources from the era</li>
+          <li>Honor the experiences and sacrifices of those who lived through WWII</li>
+          <li>Foster critical thinking about history and its lessons for today</li>
+        </ul>
+      </section>
+
+      <section class="editorial-section">
+        <h2>Editorial Standards</h2>
+        <p>We maintain rigorous editorial standards to ensure the accuracy and reliability of all content on this site:</p>
+        <div class="standards-grid">
+          <div class="standard-card">
+            <h3>Scholarly Research</h3>
+            <p>All content is based on peer-reviewed historical scholarship, primary sources, and established academic works on WWII.</p>
+          </div>
+          <div class="standard-card">
+            <h3>Multiple Perspectives</h3>
+            <p>We present diverse viewpoints and acknowledge different interpretations of historical events while maintaining factual accuracy.</p>
+          </div>
+          <div class="standard-card">
+            <h3>Transparent Sources</h3>
+            <p>We provide citations and reference materials, allowing users to verify information and explore topics further.</p>
+          </div>
+          <div class="standard-card">
+            <h3>Regular Updates</h3>
+            <p>Content is reviewed and updated regularly to reflect current historical scholarship and correct any identified inaccuracies.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contributors-section">
+        <h2>Our Contributors</h2>
+        <p>This site was developed by a team of historians, educators, researchers, and history enthusiasts committed to making WWII history accessible to everyone. Our contributors include:</p>
+        <ul class="contributor-types">
+          <li><strong>Academic Historians:</strong> Specialists in military history, European history, and WWII studies</li>
+          <li><strong>Educators:</strong> Teachers and instructional designers who understand how to present complex information clearly</li>
+          <li><strong>Researchers:</strong> Scholars working with primary sources and archival materials</li>
+          <li><strong>Subject Matter Experts:</strong> Specialists in specific battles, campaigns, and historical periods</li>
+        </ul>
+      </section>
+
+      <section class="approach-section">
+        <h2>Our Approach</h2>
+        <p>We believe that understanding WWII requires:</p>
+        <div class="approach-cards">
+          <div class="approach-card">
+            <h3>Historical Context</h3>
+            <p>Understanding the causes and conditions that led to World War II, including post-WWI politics, economic factors, and ideological movements.</p>
+          </div>
+          <div class="approach-card">
+            <h3>Human Stories</h3>
+            <p>Recognizing that history is made by people—soldiers, civilians, leaders, and ordinary individuals whose choices shaped events.</p>
+          </div>
+          <div class="approach-card">
+            <h3>Global Perspective</h3>
+            <p>Covering the war across all theaters—Europe, the Pacific, North Africa, Asia—and including voices from all nations involved.</p>
+          </div>
+          <div class="approach-card">
+            <h3>Educational Value</h3>
+            <p>Presenting information in ways that help learners at all levels—from high school students to advanced researchers.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="commitment-section">
+        <h2>Our Commitment to Accuracy</h2>
+        <p>Historical accuracy is our paramount concern. We:</p>
+        <ul class="commitment-list">
+          <li>Verify all facts against established historical records and scholarly sources</li>
+          <li>Correct errors promptly when they are identified</li>
+          <li>Distinguish between established facts, scholarly interpretations, and areas of historical debate</li>
+          <li>Avoid presentism—judging past events by today's standards without historical context</li>
+          <li>Acknowledge gaps in the historical record and areas where evidence is incomplete</li>
+          <li>Treat all subjects, including difficult topics like the Holocaust, with appropriate sensitivity and respect</li>
+        </ul>
+      </section>
+
+      <section class="contact-cta">
+        <h2>Have Questions or Suggestions?</h2>
+        <p>We value feedback and are committed to continuous improvement. If you notice any inaccuracies, have suggestions for additional content, or would like to contribute to this project, please <a href="/www-ii-history/contact">contact us</a>.</p>
+      </section>
+    </div>
+  </section>
+</main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>About This Site</h3>
+      <p>A comprehensive resource for understanding World War II's causes, events, key figures, and lasting impact on world history.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/www-ii-history/timeline">Timeline</a></li>
+        <li><a href="/www-ii-history/education">Education Resources</a></li>
+        <li><a href="/www-ii-history/primary-sources">Primary Sources</a></li>
+        <li><a href="/www-ii-history/search">Search</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="/www-ii-history/contact">Contact Us</a></li>
+        <li><a href="/www-ii-history/about">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 WWII History. All rights reserved.</p>
+  </div>
+</footer></body></html>
