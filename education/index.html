@@ -1,0 +1,876 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Educational Resources - Teaching WWII History</title><style>/* Global CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+a {
+  color: #2d5a7b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d4a574;
+}
+
+/* Header Styles */
+.site-header {
+  background-color: #1a3a52;
+  color: #ffffff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d4a574;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: #e8b88f;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* Navigation Styles */
+.site-nav {
+  background-color: #1a3a52;
+  padding: 0;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list a {
+  display: block;
+  padding: 15px 18px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-list a:hover {
+  background-color: rgba(212, 165, 116, 0.1);
+  color: #d4a574;
+  border-bottom-color: #d4a574;
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #1a3a52;
+  color: #ffffff;
+  padding: 50px 20px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3 {
+  color: #d4a574;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #d4a574;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(212, 165, 116, 0.2);
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+  
+  .site-nav {
+    display: none;
+    width: 100%;
+    background-color: #0f2639;
+  }
+  
+  .site-nav.active {
+    display: block;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  
+  .nav-list a {
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(212, 165, 116, 0.1);
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* Educational Resources - Teaching WWII History - Page CSS */
+.education-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-hero {
+  background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.95;
+}
+
+.resources-intro {
+  padding: 20px 0 40px;
+  border-bottom: 2px solid #e8e8e8;
+  margin-bottom: 40px;
+}
+
+.resources-intro p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 900px;
+}
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.resources-grid {
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+.resources-grid .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.resource-card {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.resource-card:hover {
+  border-color: #d4a574;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.resource-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.resource-card h3 {
+  font-size: 1.3rem;
+  color: #1a3a52;
+  margin-bottom: 12px;
+}
+
+.resource-card p {
+  color: #666;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.resource-topics {
+  list-style: none;
+  padding: 0;
+}
+
+.resource-topics li {
+  padding: 6px 0;
+  color: #555;
+  padding-left: 20px;
+  position: relative;
+}
+
+.resource-topics li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #d4a574;
+  font-size: 1.2rem;
+}
+
+.teaching-tips {
+  background: #f5f5f5;
+  padding: 50px 20px;
+  margin: 40px 0;
+  border-radius: 8px;
+}
+
+.teaching-tips h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1a3a52;
+  margin-bottom: 40px;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.tip {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 6px;
+  border-left: 4px solid #d4a574;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tip h4 {
+  color: #1a3a52;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.tip p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.resources-cta {
+  background: linear-gradient(135deg, #2d5a7b 0%, #1a3a52 100%);
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+.resources-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.resources-cta > p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #d4a574;
+  color: #1a3a52;
+}
+
+.btn-primary:hover {
+  background-color: #e8b88f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 50px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .resources-grid .container {
+    grid-template-columns: 1fr;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-cta {
+    padding: 40px 20px;
+  }
+
+  .resources-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}.education-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-hero {
+  background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.95;
+}
+
+.resources-intro {
+  padding: 20px 0 40px;
+  border-bottom: 2px solid #e8e8e8;
+  margin-bottom: 40px;
+}
+
+.resources-intro p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 900px;
+}
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.resources-grid {
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+.resources-grid .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.resource-card {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.resource-card:hover {
+  border-color: #d4a574;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.resource-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.resource-card h3 {
+  font-size: 1.3rem;
+  color: #1a3a52;
+  margin-bottom: 12px;
+}
+
+.resource-card p {
+  color: #666;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.resource-topics {
+  list-style: none;
+  padding: 0;
+}
+
+.resource-topics li {
+  padding: 6px 0;
+  color: #555;
+  padding-left: 20px;
+  position: relative;
+}
+
+.resource-topics li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #d4a574;
+  font-size: 1.2rem;
+}
+
+.teaching-tips {
+  background: #f5f5f5;
+  padding: 50px 20px;
+  margin: 40px 0;
+  border-radius: 8px;
+}
+
+.teaching-tips h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1a3a52;
+  margin-bottom: 40px;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.tip {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 6px;
+  border-left: 4px solid #d4a574;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tip h4 {
+  color: #1a3a52;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.tip p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.resources-cta {
+  background: linear-gradient(135deg, #2d5a7b 0%, #1a3a52 100%);
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+.resources-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.resources-cta > p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #d4a574;
+  color: #1a3a52;
+}
+
+.btn-primary:hover {
+  background-color: #e8b88f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 50px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .resources-grid .container {
+    grid-template-columns: 1fr;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-cta {
+    padding: 40px 20px;
+  }
+
+  .resources-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}</style></head><body><header class="site-header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="/www-ii-history/home">WWII History</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', function() {
+    document.querySelector('.site-nav').classList.toggle('active');
+  });
+</script><nav class="site-nav">
+  <ul class="nav-list">
+    <li><a href="/www-ii-history/home">Home</a></li>
+    <li><a href="/www-ii-history/timeline">Timeline</a></li>
+    <li><a href="/www-ii-history/causes">Causes</a></li>
+    <li><a href="/www-ii-history/key-figures">Key Figures</a></li>
+    <li><a href="/www-ii-history/battles">Battles</a></li>
+    <li><a href="/www-ii-history/pacific-war">Pacific War</a></li>
+    <li><a href="/www-ii-history/holocaust">Holocaust</a></li>
+    <li><a href="/www-ii-history/primary-sources">Primary Sources</a></li>
+    <li><a href="/www-ii-history/education">Education</a></li>
+    <li><a href="/www-ii-history/about">About</a></li>
+    <li><a href="/www-ii-history/search">Search</a></li>
+    <li><a href="/www-ii-history/contact">Contact</a></li>
+  </ul>
+</nav><main class="education-main">
+  <section class="page-hero">
+    <div class="hero-content">
+      <h1>Educational Resources</h1>
+      <p class="hero-subtitle">Teaching and Learning World War II History</p>
+    </div>
+  </section>
+
+  <section class="resources-intro">
+    <div class="container">
+      <p>Explore our comprehensive collection of educational materials designed for teachers, students, and history enthusiasts. These resources include lesson plans, discussion questions, interactive timelines, and classroom activities to deepen understanding of World War II's causes, events, and historical significance.</p>
+    </div>
+  </section>
+
+  <section class="resources-grid">
+    <div class="container">
+      <div class="resource-card">
+        <div class="resource-icon">📋</div>
+        <h3>Lesson Plans</h3>
+        <p>Structured lesson plans covering key topics in WWII history, suitable for various grade levels and learning objectives.</p>
+        <ul class="resource-topics">
+          <li>Causes of World War II</li>
+          <li>Major Battles and Campaigns</li>
+          <li>The Holocaust</li>
+          <li>Home Front and Civilian Life</li>
+          <li>War in the Pacific</li>
+        </ul>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-icon">💬</div>
+        <h3>Discussion Questions</h3>
+        <p>Thought-provoking questions designed to encourage critical thinking and classroom debate about WWII events and their consequences.</p>
+        <ul class="resource-topics">
+          <li>Ethical Dilemmas</li>
+          <li>Leadership and Decision Making</li>
+          <li>Historical Cause and Effect</li>
+          <li>Comparative Analysis</li>
+          <li>Primary Source Interpretation</li>
+        </ul>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-icon">📅</div>
+        <h3>Interactive Timelines</h3>
+        <p>Visual timelines with key dates and events, helping students understand the chronological progression of WWII.</p>
+        <ul class="resource-topics">
+          <li>European Theater</li>
+          <li>Pacific Theater</li>
+          <li>Home Front Events</li>
+          <li>Technology Development</li>
+          <li>War Conclusion and Aftermath</li>
+        </ul>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-icon">✏️</div>
+        <h3>Classroom Activities</h3>
+        <p>Engaging hands-on activities including simulations, document analysis, and creative projects for varied learning styles.</p>
+        <ul class="resource-topics">
+          <li>Document Analysis Worksheets</li>
+          <li>Historical Simulations</li>
+          <li>Research Projects</li>
+          <li>Creative Writing Prompts</li>
+          <li>Group Presentations</li>
+        </ul>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-icon">🎬</div>
+        <h3>Media Resources</h3>
+        <p>Curated videos, documentaries, and multimedia content that bring WWII history to life in the classroom.</p>
+        <ul class="resource-topics">
+          <li>Documentary Recommendations</li>
+          <li>Video Clips and Footage</li>
+          <li>Audio Interviews</li>
+          <li>Photo Essays</li>
+          <li>Virtual Museum Tours</li>
+        </ul>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-icon">📚</div>
+        <h3>Primary Sources</h3>
+        <p>Authentic historical documents, letters, speeches, and artifacts with teaching guides for classroom use.</p>
+        <ul class="resource-topics">
+          <li>Government Documents</li>
+          <li>Personal Letters and Diaries</li>
+          <li>Speeches and Declarations</li>
+          <li>Newspaper Articles</li>
+          <li>Photographs and Maps</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="teaching-tips">
+    <div class="container">
+      <h2>Teaching Tips for WWII History</h2>
+      <div class="tips-grid">
+        <div class="tip">
+          <h4>Encourage Multiple Perspectives</h4>
+          <p>Explore WWII from different viewpoints—military, civilian, political, and personal—to provide a comprehensive understanding of this complex historical period.</p>
+        </div>
+        <div class="tip">
+          <h4>Connect to Current Events</h4>
+          <p>Draw parallels between historical events and contemporary issues to help students understand the relevance and lasting impact of WWII.</p>
+        </div>
+        <div class="tip">
+          <h4>Use Primary Sources</h4>
+          <p>Authentic documents and testimonies engage students and help them develop critical analysis skills while learning directly from historical evidence.</p>
+        </div>
+        <div class="tip">
+          <h4>Incorporate Survivor Testimonies</h4>
+          <p>Personal accounts from WWII survivors provide powerful emotional context and humanize historical events for students.</p>
+        </div>
+        <div class="tip">
+          <h4>Utilize Visual Materials</h4>
+          <p>Maps, photographs, and videos help students visualize locations, understand geographic context, and grasp the scale of historical events.</p>
+        </div>
+        <div class="tip">
+          <h4>Foster Respectful Discussion</h4>
+          <p>Create a classroom environment where students feel comfortable discussing sensitive topics while maintaining historical accuracy and sensitivity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="resources-cta">
+    <div class="container">
+      <h2>Ready to Explore?</h2>
+      <p>Start with our curated lesson plans or browse primary sources to find the perfect materials for your classroom.</p>
+      <div class="cta-buttons">
+        <a href="/www-ii-history/timeline" class="btn btn-primary">View Timeline</a>
+        <a href="/www-ii-history/primary-sources" class="btn btn-secondary">Browse Primary Sources</a>
+      </div>
+    </div>
+  </section>
+</main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>About This Site</h3>
+      <p>A comprehensive resource for understanding World War II's causes, events, key figures, and lasting impact on world history.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/www-ii-history/timeline">Timeline</a></li>
+        <li><a href="/www-ii-history/education">Education Resources</a></li>
+        <li><a href="/www-ii-history/primary-sources">Primary Sources</a></li>
+        <li><a href="/www-ii-history/search">Search</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="/www-ii-history/contact">Contact Us</a></li>
+        <li><a href="/www-ii-history/about">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 WWII History. All rights reserved.</p>
+  </div>
+</footer></body></html>
